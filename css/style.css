@@ -27,3 +27,17 @@ main {
     width: calc(100% - 200px);
 }
 
+header {
+    width: calc(100% - 200px);
+    height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#wrapper > aside,
+#wrapper > main {
+    border: 2px dashed green;
+}
+
