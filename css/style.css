@@ -27,6 +27,7 @@ footer {
     background-color: rgb(71, 71, 71);
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 #wrapper {
@@ -37,8 +38,21 @@ footer {
 }
 
 aside {
+    position: relative;
     width: 200px;
     background-color: black;
+    min-height: 400px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-bottom-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 main {
@@ -102,9 +116,25 @@ header > button {
     color: grey;
 }
 
-#wrapper > aside,
-#wrapper > main {
-    /*border: 2px dashed green;*/
+.logo-container {
+    padding: 20px;
+}
+
+.main-nav-container {
+    display: inline-block;
+    padding: 7px 5px;
+}
+
+.playlist-container {
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.playlist-container ul {
+    overflow-y: auto;
+    flex-grow: 1;
 }
 
 /* MEDIA QUERY */
@@ -133,4 +163,24 @@ header > button {
 
 .debug footer > * {
     color: white;
+}
+
+.debug .logo-container {
+    background-color: antiquewhite;
+    border: 2px dashed orange;
+}
+
+.debug .main-nav-container {
+    background-color: lightseagreen;
+    border: 2px dashed yellow;
+}
+
+.debug .aside-bottom-info {
+    background-color: red;
+    border: 2px dashed burlywood;
+}
+
+.debug .playlist-container {
+    background-color: lightcoral;
+    border: 2px dashed aquamarine;
 }
