@@ -30,6 +30,10 @@ footer {
     position: relative;
 }
 
+footer > nav ul li {
+    display: inline-block;
+}
+
 #wrapper {
     height: calc(100vh - 100px);
     color: white;
