@@ -30,10 +30,6 @@ footer {
     position: relative;
 }
 
-footer > nav ul li {
-    display: inline-block;
-}
-
 #wrapper {
     height: calc(100vh - 100px);
     color: white;
@@ -141,6 +137,97 @@ header > button {
     flex-grow: 1;
 }
 
+.left-element {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-element i {
+    font-size: 1.2em;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.imagine-element {
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    text-align: justify;
+}
+
+.center-element {
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+.center-element > * {
+    padding: 10px 0;
+}
+
+.center-element .center-top {
+    text-align: center;
+}
+
+.center-element i {
+    font-size: 1.2em;
+    vertical-align: middle;
+    margin: 0 10px;
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+.right-element i {
+    font-size: 1.2em;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.center-element a:nth-child(3) {
+    font-size: 1.6em;
+}
+
+.center-bottom {
+    display: flex;
+    align-items: center;
+}
+
+.track-bar {
+    height: 4px;
+    background-color: gray;
+    flex-grow: 1;
+    margin: 0 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.track-bar .elapsed {
+    width: 30%;
+    height: 100%;
+    background-color: #aaa;
+    border-radius: 20px;
+    position: relative;
+}
+
+.track-bar .elapsed::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #aaa;
+}
+
+.track-bar:hover .elapsed {
+    background-color: greenyellow;
+}
+
+.track-bar:hover .elapsed::after {
+    display: block;
+}
+
 /* MEDIA QUERY */
 @media screen and (max-width:1100px) {
     .card {
@@ -170,21 +257,21 @@ header > button {
 }
 
 .debug .logo-container {
-    background-color: antiquewhite;
-    border: 2px dashed orange;
+    background-color: black;
+    border: none;
 }
 
 .debug .main-nav-container {
-    background-color: lightseagreen;
-    border: 2px dashed yellow;
+    background-color: black;
+    color: white;
 }
 
 .debug .aside-bottom-info {
-    background-color: red;
-    border: 2px dashed burlywood;
+    background-color: black;
+    color: gray;
 }
 
 .debug .playlist-container {
-    background-color: lightcoral;
-    border: 2px dashed aquamarine;
+    background-color: black;
+    color: gray;
 }
