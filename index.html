@@ -1,322 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Web</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spotify</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="debug">
-    <section id="wrapper">
-        <aside>
-            <div class="logo-container">
-                <i class="fa-brands fa-spotify"></i>
-            </div>
-            <nav class="main-nav-container">
-                <ul>
-                    <li>
-                        <a href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Cerca
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            La tua libreria
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="playlist-container">
-                <h4>
-                    PLAYLIST
-                </h4>
-                <div>
-                    + CREA PLAYLIST
-                </div>
-                <ul>
-                    <li>
-                        <a href="#">
-                            Nome Playlist
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Nome Playlist
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Nome Playlist
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Nome Playlist
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Nome Playlist
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Nome Playlist
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Nome Playlist
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="aside-bottom-info">
-                <div>
-                    Installa app
-                </div>
-                <div>
-                    John Doe
-                </div>
-            </div>
-        </aside>
+        <!-- CSS -->
+        <link rel="stylesheet" href="./css/style.css">
+
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
         <main>
-            <header>
-                <button>
-                    EFFETTUA L'UPGRADE
-                </button>
-            </header>
-            <section id="music">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                IN EVIDENZA
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                PODCAST
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                CLASSIFICHE
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                GENERI E MOOD
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                NUOVE USCITE
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                SCOPRI
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+            <div class="container">
+                <aside class="sidebar-container">
+                    <div class="xs-screen">
+                        <div class="up-two">
+                            <div class="small-logo-container">
+                                <img src="./img/logo-small.svg" alt="small-logo">
+                            </div>
+                            
+                            <div class="home-container">
+                                <a href=""><img src="./img/home.svg" alt="home"></a>
+                            </div>
 
-                <h2>
-                    Recently played
-                </h2>
-                <div class="my-row">
-                    <div class="card">
-                        <div class="img-box">
-                            <img src="img/metal_lifting.jpg" alt="Image">
+                            <div class="search">
+                                <a href=""><img src="./img/search.svg" alt="search"></a>
+                            </div>
+
+                            <div class="libreria">
+                                <a href=""><img src="./img/libreria.svg" alt="libreria"></a>
+                            </div>
                         </div>
-                        <h4>
-                            Heavy Metal
-                        </h4>
-                        <h5>
-                            Subtitle
-                        </h5>
+
+                        <div class="down-two">
+                            <div class="download-container">
+                                <a href=""><img src="./img/download.svg" alt="download"></a>
+                            </div>
+
+                            <div class="profile-container">
+                                <a href=""><img src="./img/profile.svg" alt="profile"></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <div class="img-box">
-                            <img src="img/stranger.jpeg" alt="Image">
+
+                    <div class="lg-mg-s-screen">
+                        <div class="up">
+                            <div class="logo-container">
+                                <img src="./img/logo.svg" alt="logo">
+                            </div>
+
+                            <div class="home-row-container">
+                                <div class="my-cont-15">
+                                    <img src="./img/home.svg" alt="home">
+                                </div>
+
+                                <div class="my-text">
+                                    <a href="">Home</a>
+                                </div>   
+                            </div>
+
+                            <div class="search-row-container">
+                                <div class="my-cont-15">
+                                    <img src="./img/search.svg" alt="search">
+                                </div>
+
+                                <div class="my-text">
+                                    <a href="">Cerca</a>
+                                </div>   
+                            </div>
+
+                            <div class="libreria-row-container">
+                                <div class="my-cont-15">
+                                    <img src="./img/libreria.svg" alt="libreria">
+                                </div>
+
+                                <div class="my-text">
+                                    <a href="">La tua libreria</a>
+                                </div>   
+                            </div>
+
+                            <h3>
+                                PLAYLIST
+                            </h3>
+
+                            <a href="">
+                                <div class="add-row-container">
+                                    <div class="my-cont-15">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </div>
+
+                                    <div class="my-text">
+                                        Crea Playlist
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div class="playlist-container">
+                                <p>
+                                    <a href="">Nome Playlist</a>
+                                </p>
+
+                                <p>
+                                    <a href="">Nome Playlist</a>
+                                </p>
+
+                                <p>
+                                    <a href="">Nome Playlist</a>
+                                </p>
+
+                                <p>
+                                    <a href="">Nome Playlist</a>
+                                </p>
+
+                                <p>
+                                    <a href="">Nome Playlist</a>
+                                </p>
+
+                                <p>
+                                    <a href="">Nome Playlist</a>
+                                </p>
+
+                                <p>
+                                    <a href="">Nome Playlist</a>
+                                </p>
+
+                                <p>
+                                    <a href="">Nome Playlist</a>
+                                </p>
+
+                                <p>
+                                    <a href="">Nome Playlist</a>
+                                </p>
+                            </div>
                         </div>
-                        <h4>
-                            Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)
-                        </h4>
-                        <h5>
-                            Kyle Dixon & Michael Stein
-                        </h5>
+
+                        <div class="down">
+                            <div class="install-row-container">
+                                <div class="arrow-down-container">
+                                    <i class="fa-solid fa-arrow-down"></i>
+                                </div> 
+
+                                <div class="my-text">
+                                    <a href="">Installa app</a>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="profile-row-container">
+                                <div class="profile-container">
+                                    <img src="./img/profile.svg" alt="profile">
+                                </div>
+
+                                <div class="my-text">
+                                    <h3>John Doe</h3>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <div class="img-box">
-                            <img src="img/aquietplace.jpeg" alt="Image">
+                </aside>
+
+                <div class="main-container">
+                    <div class="top-bar-container">
+                        <div class="button-upgrade-container">
+                            <a href="">EFFETTUA L'UPGRADE</a>
                         </div>
-                        <h4>
-                            A quiet place
-                        </h4>
-                        <h5>
-                            Subtitle
-                        </h5>
                     </div>
-                    <div class="card">
-                        <div class="img-box">
-                            <img src="img/split.jpeg" alt="Image">
-                        </div>
-                        <h4>
-                            Split
-                        </h4>
-                        <h5>
-                            Subtitle
-                        </h5>
+
+                    <div class="nav-container">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="">IN EVIDENZA</a>
+                                </li>
+
+                                <li>
+                                    <a href="">PODCAST</a>
+                                </li>
+
+                                <li>
+                                    <a href="">CLASSIFICHE</a>
+                                </li>
+
+                                <li>
+                                    <a href="">GENERI E MOOD</a>
+                                </li>
+
+                                <li>
+                                    <a href="">NUOVE USCITE</a>
+                                </li>
+
+                                <li>
+                                    <a href="">SCOPRI</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="card">
-                        <div class="img-box">
-                            <img src="img/cure.jpeg" alt="Image">
+
+                    <h2 class="white-font">
+                        Recently played
+                    </h2>
+
+                    <div class="my-row">
+                        <div class="my-song-1-6 my-song-1-4 my-song-1-2">
+                            <a href="">
+                                <div class="img-container">
+                                    <div class="overlay">
+                                        <i class="fa-regular fa-circle-play" style="color: #ffffff;"></i>
+                                    </div>
+
+                                    <img src="./img/metal_lifting.jpg" alt="metal-lifting">
+                                </div>
+
+                                <h4>
+                                    Heavy Metal
+                                </h4>
+
+                                <h5>
+                                    Subtitle
+                                </h5>
+                            </a>
                         </div>
-                        <h4>
-                            A cure for wellness
-                        </h4>
-                        <h5>
-                            Subtitle
-                        </h5>
+
+                        <div class="my-song-1-6 my-song-1-4 my-song-1-2">
+                            <a href="">
+                                <div class="img-container">
+                                    <div class="overlay">
+                                        <i class="fa-regular fa-circle-play" style="color: #ffffff;"></i>
+                                    </div>
+
+                                    <img src="./img/stranger.jpeg" alt="stranger">
+                                </div>
+                                
+                                <h4>
+                                    Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)
+                                </h4>
+
+                                <h5>
+                                    Kyle Dixon & Michael Stein
+                                </h5>
+                            </a>
+                        </div>
+
+                        <div class="my-song-1-6 my-song-1-4 my-song-1-2">
+                            <a href="">
+                                <div class="img-container">
+                                    <div class="overlay">
+                                        <i class="fa-regular fa-circle-play" style="color: #ffffff;"></i>
+                                    </div>
+
+                                    <img src="./img/aquietplace.jpeg" alt="aquietplace">
+                                </div>
+                                
+                                <h4>
+                                    A quiet place
+                                </h4>
+
+                                <h5>
+                                    Subtitle
+                                </h5>
+                            </a>
+                        </div>
+
+                        <div class="my-song-1-6 my-song-1-4 my-song-1-2">
+                            <a href="">
+                                <div class="img-container">
+                                    <div class="overlay">
+                                        <i class="fa-regular fa-circle-play" style="color: #ffffff;"></i>
+                                    </div>
+
+                                    <img src="./img/split.jpeg" alt="split">
+                                </div>
+                                
+                                <h4>
+                                    Split
+                                </h4>
+
+                                <h5>
+                                    Subtitle
+                                </h5>
+                            </a>
+                        </div>
+
+                        <div class="my-song-1-6 my-song-1-4 my-song-1-2">
+                            <a href="">
+                                <div class="img-container">
+                                    <div class="overlay">
+                                        <i class="fa-regular fa-circle-play" style="color: #ffffff;"></i>
+                                    </div>
+
+                                    <img src="./img/cure.jpeg" alt="cure">
+                                </div>
+
+                                <h4>
+                                    A cure for wellness
+                                </h4>
+
+                                <h5>
+                                    Subtitle
+                                </h5>
+                            </a>
+                        </div>
+
+                        <div class="my-song-1-6 my-song-1-4 my-song-1-2">
+                            <a href="">
+                                <div class="img-container">
+                                    <div class="overlay">
+                                        <i class="fa-regular fa-circle-play" style="color: #ffffff;"></i>
+                                    </div>
+
+                                    <img src="./img/sinister.jpeg" alt="sinister">
+                                </div>
+
+                                <h4>
+                                    Sinister
+                                </h4>
+
+                                <h5>
+                                    Subtitle
+                                </h5>
+                            </a>
+                        </div>
                     </div>
-                    <div class="card">
-                        <div class="img-box">
-                            <img src="img/sinister.jpeg" alt="Image">
+
+                    <h2 class="white-font">
+                        Creato per John Doe
+                    </h2>
+
+                    <p class="secondary-font">
+                        Più ascolti, più accurati saranno i suggerimenti.
+                    </p>
+
+                    <div class="my-row">
+                        <div class="my-song-1-6 my-song-1-4 my-song-1-2">
+                            <a href="">
+                                <div class="img-container">
+                                    <div class="overlay">
+                                        <i class="fa-regular fa-circle-play" style="color: #ffffff;"></i>
+                                    </div>
+                                    
+                                    <img src="./img/radar.jpeg" alt="radar">
+                                </div>
+                                
+                                <h4>
+                                    Release Radar
+                                </h4>
+                            </a>
                         </div>
-                        <h4>
-                            Sinister
-                        </h4>
-                        <h5>
-                            Subtitle
-                        </h5>
+
+                        <div class="my-song-1-6 my-song-1-4 my-song-1-2">
+                            <a href="">
+                                <div class="img-container">
+                                    <div class="overlay">
+                                        <i class="fa-regular fa-circle-play" style="color: #ffffff;"></i>
+                                    </div>
+
+                                    <img src="./img/mixdaily.jpeg" alt="mix-daily">
+                                </div>
+
+                                <h4>
+                                    Daily Mix 1
+                                </h4>
+                            </a>
+                        </div>
+                    </div>
+
+                    <h2 class="white-font">
+                        Artisti più popolari
+                    </h2>
+
+                    <p class="secondary-font">
+                        Più ascolti, più accurati saranno i suggerimenti.
+                    </p>
+
+                    <div class="my-row">
+                        <div class="my-song-1-6 my-song-1-4 my-song-1-2">
+                            <a href="">
+                                <div class="my-circle-img">
+                                    <div class="overlay">
+                                        <i class="fa-regular fa-circle-play" style="color: #ffffff;"></i>
+                                    </div>
+
+                                    <img src="./img/youg.jpeg" alt="youg">
+                                </div>
+
+                                <h4>
+                                    Lana Del Rey
+                                </h4>
+                            </a>
+                        </div>
+
+                        <div class="my-song-1-6 my-song-1-4 my-song-1-2">
+                            <a href="">
+                                <div class="my-circle-img">
+                                    <div class="overlay">
+                                        <i class="fa-regular fa-circle-play" style="color: #ffffff;"></i>
+                                    </div>
+
+                                    <img src="./img/einaudi.jpeg" alt="einaudi">
+                                </div>
+
+                                <h4>
+                                    Ludovico Einaudi
+                                </h4>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <h2>
-                    Creato per John Doe
-                </h2>
-                <h5>
-                    Più ascolti, più saranno i suggerimenti.
-                </h5>
-                <div class="my-row">
-                    <div class="card">
-                        <div class="img-box">
-                            <img src="img/radar.jpeg" alt="Image">
-                        </div>
-                        <h4>
-                            Release Radar
-                        </h4>
-                    </div>
-                    <div class="card">
-                        <div class="img-box">
-                            <img src="img/mixdaily.jpeg" alt="Image">
-                        </div>
-                        <h4>
-                            Daily Mix 1
-                        </h4>
-                    </div>
-                </div>
-                <h2>
-                    Artisti più popolari
-                </h2>
-                <h5>
-                    Più ascolti, più saranno i suggerimenti.
-                </h5>
-                <div class="my-row">
-                    <div class="card">
-                        <div class="img-box">
-                            <img src="img/youg.jpeg" alt="Image">
-                        </div>
-                        <h4>
-                            Lana del Rey
-                        </h4>
-                    </div>
-                    <div class="card">
-                        <div class="img-box">
-                            <img src="img/einaudi.jpeg" alt="Image">
-                        </div>
-                        <h4>
-                            Ludovico Einaudi
-                        </h4>
-                    </div>
-                </div>
-            </section>
+            </div>
         </main>
-    </section>
-    <footer>
-        <div class="left-element">
-            <div>
-                <div class="imagine-element">
-                    <img src="img/sinister.jpeg" alt="Image">
-                </div>
-                <div>
-                    <div>
-                        Sinister
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-my-row">
+                    <div class="favourite-song">
+                        <div class="footer-left-container">
+                            <div class="dream-theater-external-container-img">
+                                <div class="dream-theater-container-img">
+                                    <img src="./img/artworks-000050352226-2og02l-t500x500.jpg" alt="the-count-of-tuscany">
+                                </div>
+                            </div>
+
+                            <div class="band">
+                                <h4>
+                                    Dream Theater
+                                </h4>
+
+                                <p class="secondary-font">
+                                    <a href="">The Count Of Tuscany</a>
+                                </p>
+                            </div>
+
+                            <div class="heart-and-folder-container">
+                                <div class="heart-container">
+                                    <a href=""><i class="secondary-font fa-regular fa-heart"></i></a>
+                                </div>
+
+                                <div class="folder-container">
+                                    <a href=""><i class="secondary-font fa-regular fa-folder"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        Brano Nome
+
+                    <div class="buttons">
+                        <div class="track-menù">
+                            <i class="fa-solid fa-shuffle"></i>
+
+                            <i class="fa-solid fa-backward-step"></i>
+
+                            <a href=""><i class="fa-regular fa-circle-play"></i></a>
+
+                            <i class="fa-solid fa-forward-step"></i>
+
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </div>
+
+                        <div class="song-bar-container">
+                            <div class="time-passed">
+                                0:25
+                            </div>
+
+                            <a class="song-click" href="">
+                                <div class="first-volume-bar-container">
+                                    <div class="volume-bar">
+                                        <div class="song-point">
+                                                
+                                        </div>
+
+                                        <i class="fa-solid fa-circle" style="color: #ffffff;"></i> 
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div class="time-left">
+                                4:25
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="volume">
+                        <i class="fa-solid fa-list"></i>
+                        
+                        <i class="fa-solid fa-desktop"></i>
+
+                        <i class="fa-solid fa-volume-high"></i>
+
+                        <a class="volume-click" href="">
+                            <div class="second-volume-bar-container">
+                                <div class="volume-bar">
+                                    <div class="volume-point">
+
+                                    </div>
+
+                                    <i class="fa-solid fa-circle" style="color: #ffffff;"></i>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div>
-                <a href="#">
-                    <i class="fa-regular fa-heart"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-regular fa-folder"></i>
-                </a>
-            </div>
-        </div>
-        <div class="center-element">
-            <div class="center-top">
-                <a href="#">
-                    <i class="fa-solid fa-shuffle"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-backward-step"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-sharp fa-regular fa-circle-play"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-sharp fa-solid fa-forward-step"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-rotate-right"></i>
-                </a> 
-            </div>
-            <div class="center-bottom">
-                <span>
-                    0:25
-                </span>
-                <div class="track-bar">
-                    <div class="elapsed"></div>
-                </div>
-                <span>
-                    4:35
-                </span>
-            </div>
-        </div>
-        <div class="right-element">
-            <a href="#">
-                <i class="fa-sharp fa-solid fa-list"></i>
-            </a>
-            <a href="#">
-                <i class="fa-sharp fa-solid fa-display"></i>
-            </a>
-            <a href="#">
-                <i class="fa-solid fa-volume-high"></i>
-            </a>
-        </div>
-    </footer>
-    
-</body>
+        </footer>
+    </body>
 </html>

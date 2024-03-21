@@ -1,11 +1,62 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
+/* 
+    HTML
+*/
 html {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+    ROOT
+*/
+:root {
+    --main-bg-color: #141922;
+    --footer-bg-color: #272727;
+    --top-bar-bg-color: #090B13;
+    --secondary-font-color: #787A7E;
+    --empty-bar-color: #5A5A5A;
+    --user-bg-color: #808080;
+    --scrolling-color: #C0F75F;
+}
+
+/* 
+    GENERAL
+*/
+.container {
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+}
+
+.white-font {
+    color: white;
+}
+
+.secondary-font {
+    color: var(--secondary-font-color);
+}
+
+.empty-bar-bg-color {
+    background-color: var(--empty-bar-color);
+}
+
+.user-bg-color {
+    background-color: var(--user-bg-color);
+}
+
+.scrolling-color {
+    background-color: var(--scrolling-color);
+}
+
+.my-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 16px 0;
 }
 
 img {
@@ -13,265 +64,575 @@ img {
     display: block;
 }
 
-ul {
-    list-style-type: none;
+.my-circle-img {
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 a {
-    color: inherit;
     text-decoration: none;
 }
 
-footer {
-    height: 100px;
-    background-color: rgb(71, 71, 71);
-    display: flex;
-    justify-content: space-between;
+.img-container, .my-circle-img {
     position: relative;
 }
 
-#wrapper {
-    height: calc(100vh - 100px);
-    color: white;
-    background-color: rgb(66, 66, 66);
-    display: flex;
-}
-
-aside {
-    position: relative;
-    width: 200px;
-    background-color: black;
-    min-height: 400px;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.aside-bottom-info {
+.overlay {
     position: absolute;
-    bottom: 0;
-    left: 0;
     width: 100%;
-}
-
-main {
-    width: calc(100% - 200px);
     height: 100%;
-}
-
-header {
-    width: calc(100% - 200px);
-    height: 80px;
-    padding: 20px;
-    position: fixed;
     top: 0;
+    left: 0;
     right: 0;
-    background-color: rgb(20, 20, 20);
-    display: flex;
-    justify-content: flex-end;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
 }
 
-header > button {
-    width: 200px;
-    color: white;
-    border-color: white;
-    background-color: black;
-    border-radius: 40px;
+.overlay i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5em;
 }
 
-#music {
-    padding: 80px 10px;
+.my-song-1-6:hover .overlay, .my-song-1-4:hover .overlay, .my-song-1-2:hover .overlay {
+    display: block;
+}
+
+/* 
+    MAIN
+*/
+/* 
+    ASIDE
+*/
+.sidebar-container {
+    width: 160px;
     height: 100%;
+    background-color: black;
+}
+
+.xs-screen {
+    color: var(--secondary-font-color);
+    height: 100%;
+    display: none;
     overflow: auto;
 }
 
-#music > nav > ul {
+.xs-screen img {
+    width: 55%;
+    margin: 0 auto;
+}
+
+.up-two > *, .down-two > * {
+    padding: 4px 0;
+}
+
+.down-two .download-container img {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.down-two .profile-container {
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+.down-two .profile-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--user-bg-color);
+    border-radius: 50%;
+}
+
+.lg-mg-s-screen {
+    color: var(--secondary-font-color);
+    height: 100%;
     display: flex;
-    justify-content: center;
-    padding: 20px 0;
-    color: grey;
-    font-size: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
 }
 
-#music > nav > ul li {
-    margin: 0 10px;
-}
-
-.my-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 10px -10px 0;
-}
-
-.card {
-    width: calc((100% / 6) - 20px);
+.up, .down {
     padding: 10px;
-    margin: 10px;
-    text-align: center;
-    line-height: 2;
-}
-
-.card h5 {
-    color: grey;
 }
 
 .logo-container {
-    padding: 20px;
+    height: calc(80px - 10px);
 }
 
-.main-nav-container {
-    display: inline-block;
-    padding: 7px 5px;
+.home-row-container, .search-row-container, .libreria-row-container, .add-row-container {
+    display: flex;
+    align-items: center;
+    padding-bottom: 6px;
+}
+
+.libreria-row-container {
+    padding-bottom: 16px;
+}
+
+.my-cont-15 {
+    width: 15%;
+}
+
+.my-text {
+    width: 85%;
+    padding-left: 6px;
+    font-size: 0.75em;
+}
+
+.up h3 {
+    color: white;
+    font-size: 0.8em;
+    padding-bottom: 6px;
+}
+
+.down h3 {
+    color: white;
+}
+
+.add-row-container .my-cont-15 {
+    width: 24px;
+    height: 24px;
+    background-color: #A3A3A3;
+    position: relative;
+}
+
+.add-row-container .my-cont-15 i {
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.up p {
+    font-size: 0.75em;
+    padding-bottom: 6px;
 }
 
 .playlist-container {
-    flex-grow: 1;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    height: 35%;
+    overflow: auto;
 }
 
-.playlist-container ul {
-    overflow-y: auto;
-    flex-grow: 1;
+.down .profile-container {
+    width: 24px;
+    height: 24px;
+    position: relative;
 }
 
-.left-element {
-    display: flex;
-    justify-content: space-between;
+.down .profile-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--user-bg-color);
+    border-radius: 50%;
 }
 
-.left-element i {
-    font-size: 1.2em;
-    vertical-align: middle;
-    margin: 0 10px;
-}
-
-.imagine-element {
-    display: flex;
-    justify-content: space-between;
-    float: right;
-    text-align: justify;
-}
-
-.center-element {
-    flex-grow: 1;
-    max-width: 500px;
-}
-
-.center-element > * {
-    padding: 10px 0;
-}
-
-.center-element .center-top {
-    text-align: center;
-}
-
-.center-element i {
-    font-size: 1.2em;
-    vertical-align: middle;
-    margin: 0 10px;
-    flex-grow: 1;
-    max-width: 500px;
-}
-
-.right-element i {
-    font-size: 1.2em;
-    vertical-align: middle;
-    margin: 0 10px;
-}
-
-.center-element a:nth-child(3) {
-    font-size: 1.6em;
-}
-
-.center-bottom {
+.install-row-container, .profile-row-container {
     display: flex;
     align-items: center;
 }
 
-.track-bar {
-    height: 4px;
-    background-color: gray;
-    flex-grow: 1;
-    margin: 0 20px;
-    cursor: pointer;
+.arrow-down-container {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    background-color: black;
+    border: 1px solid var(--secondary-font-color);
+    border-radius: 50%;
+}
+
+.arrow-down-container i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.down hr {
+    margin: 12px 0;
+    border: 1px solid var(--secondary-font-color);
+}
+
+.lg-mg-s-screen .up .home-row-container .my-text a {
+    color: white;
+}
+
+.lg-mg-s-screen .up div a, .lg-mg-s-screen .up a, .lg-mg-s-screen .down div a {
+    color: var(--secondary-font-color);
+}
+
+.lg-mg-s-screen .up div a:hover, .lg-mg-s-screen .up a:hover, .lg-mg-s-screen .down div a:hover {
+    color: white;
+}
+
+/* 
+    MAIN CONTENT
+*/
+.main-container {
+    width: calc(100% - 160px);
+    height: 100%;
+    background-color: var(--main-bg-color);
+    overflow: auto;
+}
+
+.top-bar-container {
+    height: 80px;
+    background-color: var(--top-bar-bg-color);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.button-upgrade-container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 16px;
+}
+
+.top-bar-container a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 6px 12px;
+    background-color: var(--top-bar-bg-color);
+    border: 1px solid white;
     border-radius: 20px;
 }
 
-.track-bar .elapsed {
+.top-bar-container a:hover {
+    padding: 10px 20px;
+    font-size: 1.1em;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav-container li {
+    display: inline-block;
+    padding: 12px 0;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: var(--secondary-font-color);
+    padding: 6px 6px;
+    font-size: 0.8em;
+}
+
+.nav-container a:hover {
+    color: white;
+}
+
+.main-container h2 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+}
+
+.main-container h4 {
+    color: white;
+    margin: 6px 0;
+}
+
+.main-container h5 {
+    color: var(--secondary-font-color);
+}
+
+.main-container p {
+    margin-bottom: 16px;
+    margin-left: 16px;
+    font-size: 0.8em;
+}
+
+.my-song-1-6 {
+    width: calc((100% / 6) - 32px);
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* 
+    FOOTER
+*/
+footer {
+    color: white;
+}
+
+.footer-container {
+    width: 100%;
+    height: 80px;
+    background-color: var(--footer-bg-color);
+}
+
+.footer-my-row {
+    height: 100%;
+    padding: 0 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.favourite-song {
+    width: 152px;
+}
+
+.favourite-song .band a {
+    color: var(--secondary-font-color);
+}
+
+.favourite-song .band a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.favourite-song .heart-and-folder-container a i:hover {
+    color: white;
+}
+
+.footer-left-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dream-theater-container-img {
+    width: 40px;
+    height: 40px;
+}
+
+footer h4, footer p {
+    font-size: 0.5em;
+    padding-left: 6px;
+}
+
+footer h4 {
+    padding-bottom: 4px;
+}
+
+.folder-container {
+    padding-left: 8px;
+}
+
+.heart-and-folder-container {
+    display: flex;
+}
+
+.buttons i:not(.volume-bar i) {
+    font-size: 1.3em;
+    padding: 0 12px;
+}
+
+.buttons a i {
+    color: white;
+    font-size: 1.8em;
+}
+
+.buttons a i:hover {
+    font-size: 2.4em;
+}
+
+.track-menù {
+    text-align: center;
+}
+
+.song-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.time-passed {
+    font-size: 0.6em;
+    padding-right: 6px;
+}
+
+.time-left {
+    font-size: 0.6em;
+    padding-left: 6px;
+}
+
+.song-bar {
+    padding: 0px 12px;
+    width: 300px;
+}
+
+.volume {
+    display: flex;
+}
+
+.volume i {
+    font-size: 0.9em;
+    padding: 0 4px;
+}
+
+.volume i:nth-child(3) {
+    padding-right: 8px;
+}
+
+.first-volume-bar-container {
+    width: 300px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.second-volume-bar-container {
+    width: 100px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.volume-bar {
+    width: 100%;
+    height: 30%;
+    background-color: var(--empty-bar-color);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.song-click .first-volume-bar-container .volume-bar i {
+    font-size: 1.4em;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.song-point {
     width: 30%;
     height: 100%;
-    background-color: #aaa;
-    border-radius: 20px;
-    position: relative;
+    background-color: white;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 
-.track-bar .elapsed::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #aaa;
+.volume-point {
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 
-.track-bar:hover .elapsed {
-    background-color: greenyellow;
+.volume-click .second-volume-bar-container .volume-bar i {
+    font-size: 1.4em;
+    transform: translateX(-50%);
+    display: none;
 }
 
-.track-bar:hover .elapsed::after {
+.song-click:hover .song-point {
+    background-color: var(--scrolling-color);
+}
+
+.song-click:hover .volume-bar i {
     display: block;
 }
 
-/* MEDIA QUERY */
-@media screen and (max-width:1100px) {
-    .card {
-        width: calc((100% / 4) - 20px);
+.volume-click:hover .volume-point {
+    background-color: var(--scrolling-color);
+}
+
+.volume-click:hover .volume-bar i {
+    display: block;
+}
+
+/* 
+    MEDIA QUERY
+*/
+@media screen and (max-width: 1100px) {
+    .my-song-1-4 {
+        width: calc((25%) - 32px);
+    }
+
+    .first-volume-bar-container {
+        width: 250px;
     }
 }
 
-@media screen and (max-width:700px) {
-    .card {
-        width: calc((100% / 2) - 20px);
+@media screen and (max-width: 700px) {
+    .my-song-1-2 {
+        width: calc((50%) - 32px);
     }
-}
 
-@media screen and (max-width:600px) {
-    aside {
+    .first-volume-bar-container {
+        width: 200px;
+    }
+
+    .second-volume-bar-container {
         width: 80px;
     }
+}
 
-    main,
-    header {
-        width: calc(100% - 80px);
+@media screen and (max-width: 600px) {
+    .sidebar-container {
+        width: 60px;
     }
-}
 
-.debug footer > * {
-    color: white;
-}
+    .lg-mg-s-screen {
+        display: none;
+    }
 
-.debug .logo-container {
-    background-color: black;
-    border: none;
-}
+    .xs-screen {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
-.debug .main-nav-container {
-    background-color: black;
-    color: white;
-}
+    .main-container {
+        width: calc(100% - 60px);
+    }
 
-.debug .aside-bottom-info {
-    background-color: black;
-    color: gray;
-}
+    .my-song-1-2 {
+        width: calc((50%) - 32px);
+    }
 
-.debug .playlist-container {
-    background-color: black;
-    color: gray;
+    /* 
+        FOOTER
+    */
+    .favourite-song {
+        width: 100px;
+    }
+
+    .heart-and-folder-container {
+        display: block;
+        padding-left: 4px;
+    }
+
+    .folder-container {
+        padding: 0;
+    }
+
+    .buttons i {
+        font-size: 1.1em;
+        padding: 0 8px;
+    }
+
+    .first-volume-bar-container {
+        width: 120px;
+    }
+
+    .volume i {
+        font-size: 0.8em;
+        padding: 0 3px;
+    }
+
+    .second-volume-bar-container {
+        width: 60px;
+    }
 }
